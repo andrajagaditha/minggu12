@@ -122,6 +122,59 @@
             </aside>
         </section>
 
+        <!-- Bagian Form Kontak -->
+        <section id="kontak">
+            <h2>E. Form Kontak Pengunjung</h2>
+            <p>Silakan isi form di bawah ini untuk mengirimkan pesan:</p>
+
+            <form action="simpan.php" method="post">
+                <p>
+                    <label for="fnama">Nama Lengkap:</label><br>
+                    <input type="text" id="fnama" name="fnama" size="30" required>
+                </p>
+
+                <p>
+                    <label for="femail">Email:</label><br>
+                    <input type="email" id="femail" name="femail" size="30" required>
+                </p>
+
+                <fieldset>
+                    <legend>Jenis Kelamin</legend>
+                    <input type="radio" id="pria" name="fjkel" value="Pria" required>
+                    <label for="pria">Pria</label>
+                    <input type="radio" id="wanita" name="fjkel" value="Wanita">
+                    <label for="wanita">Wanita</label>
+                </fieldset>
+
+                <p>
+                    <label for="fprodi">Program Studi:</label><br>
+                    <select name="fprodi" id="fprodi">
+                        <option value="SI">Sistem Informasi S1</option>
+                        <option value="TI">Teknik Informatika S1</option>
+                        <option value="DKV">Desain Komunikasi Visual S1</option>
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>Hobi / Minat</legend>
+                    <input type="checkbox" id="coding" name="fhobi[]" value="coding">
+                    <label for="coding">Coding</label>
+                    <input type="checkbox" id="reading" name="fhobi[]" value="membaca">
+                    <label for="reading">Membaca</label>
+                </fieldset>
+
+                <p>
+                    <label for="fpesan">Pesan:</label><br>
+                    <textarea name="fpesan" id="fpesan" rows="5" cols="40" required></textarea>
+                </p>
+
+                <p>
+                    <input type="submit" value="Kirim">
+                    <input type="reset" value="Reset">
+                </p>
+            </form>
+        </section>
+
     </main>
 
     <hr>
