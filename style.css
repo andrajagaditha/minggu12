@@ -1,0 +1,231 @@
+/* ==========================================================
+   Tugas 2 - Pemrograman Web Dasar
+   Portofolio Diyandra Jagadditha (A12.2025.07407)
+   Melengkapi Bootstrap 5 dengan CSS kustom + media queries
+   ========================================================== */
+
+/* ---------- 1. Variabel warna (dari Tugas 1) ---------- */
+:root {
+    --navy: #183a56;
+    --copper: #b87d4e;
+    --peach: #edbf98;
+    --cream: #fdf3e9;
+    --bg: #f6f7f5;
+    --line: #dce4e9;
+    --soft: #eff4f6;
+    --muted: #617184;
+    --text: #243243;
+}
+
+/* ---------- 2. Dasar ---------- */
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;           /* cegah horizontal scroll */
+}
+
+img { max-width: 100%; height: auto; }
+a { color: var(--navy); }
+a:hover { color: var(--copper); }
+
+/* ---------- 3. Header (Flexbox) ---------- */
+.hero {
+    background: linear-gradient(135deg, var(--navy), #102a3f);
+    color: #fff;
+    padding: 3.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+}
+.hero .eyebrow {
+    color: var(--peach);
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+}
+.hero h1 { font-size: 2.6rem; font-weight: 700; margin: 0; }
+.hero p  { color: #dbe6ee; margin: 0; }
+
+/* ---------- 4. Navbar ---------- */
+.navbar-custom {
+    background-color: #fff;
+    border-bottom: 1px solid var(--line);
+}
+.navbar-custom .nav-link {
+    color: var(--navy);
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+}
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+    color: var(--copper);
+    border-bottom-color: var(--copper);
+}
+
+/* ---------- 5. Kartu seksi ---------- */
+.section-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: .75rem;
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(24, 58, 86, .05);
+}
+.section-title {
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+.section-title .letter { color: var(--copper); }
+.sub-title { color: var(--navy); font-weight: 700; font-size: 1.15rem; }
+
+/* ---------- 6. Profil (Flexbox) ---------- */
+.profile-wrap {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+.profile-photo { flex: 0 0 170px; text-align: center; }
+.profile-photo img {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border: 3px solid var(--line);
+    border-radius: .5rem;
+}
+.profile-photo figcaption { color: var(--muted); font-size: .85rem; margin-top: .4rem; }
+.profile-text { flex: 1 1 auto; min-width: 0; }
+
+.quote-box {
+    border-left: 4px solid var(--copper);
+    background: var(--bg);
+    padding: .9rem 1.1rem;
+    color: var(--muted);
+    font-style: italic;
+    border-radius: 0 .5rem .5rem 0;
+}
+
+/* ---------- 7. Data singkat (Grid) ---------- */
+.info-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    border: 1px solid var(--line);
+    border-radius: .5rem;
+    overflow: hidden;
+    margin: 0;
+}
+.info-grid dt, .info-grid dd {
+    padding: .65rem .9rem;
+    margin: 0;
+    border-bottom: 1px solid var(--line);
+}
+.info-grid dt { background: var(--soft); color: var(--navy); font-weight: 700; }
+.info-grid dt:last-of-type, .info-grid dd:last-of-type { border-bottom: 0; }
+
+/* ---------- 8. Tabel pendidikan (data tabular) ---------- */
+.table-edu thead th { background: var(--navy); color: #fff; white-space: nowrap; }
+.table-edu tbody tr:nth-child(even) { background: var(--soft); }
+.table-edu caption { color: var(--muted); font-weight: 700; caption-side: top; }
+
+/* ---------- 9. Keahlian ---------- */
+.skill-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.skill-item { margin-bottom: 1rem; }
+.skill-item .progress { height: .75rem; background: var(--soft); }
+.skill-item .progress-bar { background-color: var(--copper); }
+
+/* ---------- 10. Proyek ---------- */
+.project-card {
+    border-left: 4px solid var(--copper);
+    padding: .5rem 0 .5rem 1.25rem;
+}
+.project-card h3 { color: var(--navy); font-weight: 700; font-size: 1.2rem; }
+.project-card .progress { height: .75rem; max-width: 320px; }
+.project-card .progress-bar { background-color: var(--navy); }
+
+.note-box {
+    background: var(--cream);
+    border: 1px solid var(--peach);
+    border-radius: .5rem;
+    padding: .9rem 1.1rem;
+    margin-top: 1.25rem;
+}
+.note-box strong { color: var(--copper); }
+
+/* ---------- 11. Form ---------- */
+.contact-form fieldset {
+    border: 1px solid var(--line);
+    border-radius: .5rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+}
+.contact-form legend {
+    float: none;
+    width: auto;
+    padding: 0 .5rem;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+}
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color: var(--copper);
+    box-shadow: 0 0 0 .2rem rgba(184, 125, 78, .2);
+}
+.btn-navy { background: var(--navy); color: #fff; border: 0; }
+.btn-navy:hover { background: var(--copper); color: #fff; }
+
+/* ---------- 12. Footer ---------- */
+.site-footer {
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+/* ==========================================================
+   RESPONSIVE (media queries)
+   ========================================================== */
+
+/* Tablet ke bawah */
+@media (max-width: 991.98px) {
+    .hero h1 { font-size: 2.1rem; }
+    .skill-grid { gap: 1.25rem; }
+}
+
+/* Mobile (lebar di bawah 768px) */
+@media (max-width: 767.98px) {
+    .hero { padding: 2.25rem 1rem; }
+    .hero h1 { font-size: 1.6rem; }
+
+    .section-card { padding: 1.15rem; }
+
+    /* profil: foto di atas, teks di bawah */
+    .profile-wrap { flex-direction: column; align-items: center; }
+    .profile-photo { flex-basis: auto; }
+
+    /* data singkat: satu kolom */
+    .info-grid { grid-template-columns: 1fr; }
+    .info-grid dt { border-bottom: 0; padding-bottom: .2rem; }
+
+    /* keahlian & hobi ditumpuk */
+    .skill-grid { grid-template-columns: 1fr; }
+
+    .table-edu { font-size: .85rem; }
+}
+
+/* Mobile kecil */
+@media (max-width: 400px) {
+    .hero h1 { font-size: 1.35rem; }
+    .navbar-brand { font-size: .95rem; }
+}
