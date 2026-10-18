@@ -6,382 +6,285 @@
     <meta name="description" content="Portofolio Diyandra Jagadditha, mahasiswa Sistem Informasi Universitas Dian Nuswantoro.">
     <meta name="author" content="Diyandra Jagadditha">
     <title>Portofolio Diyandra Jagadditha - A12.2025.07407</title>
+
+    <!-- Bootstrap 5 (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS kustom (dimuat setelah Bootstrap agar dapat menimpa) -->
+    <link href="style.css" rel="stylesheet">
 </head>
 
-<!-- Warna memakai atribut HTML (bgcolor, text, link), tanpa CSS dan JavaScript -->
-<body id="atas" bgcolor="#f6f7f5" text="#243243" link="#183a56" vlink="#5a4a8a" alink="#b87d4e">
-<font face="Arial, Helvetica, sans-serif">
+<body id="atas">
 
     <!-- Header Halaman -->
-    <header>
-        <table width="100%" bgcolor="#183a56" cellpadding="30" cellspacing="0">
-            <tr>
-                <td align="center">
-                    <font color="#edbf98" size="2"><b>PORTOFOLIO PRIBADI</b></font>
-                    <h1><font color="#ffffff">DIYANDRA JAGADDITHA</font></h1>
-                    <font color="#dbe6ee">Program Studi Sistem Informasi &ndash; Universitas Dian Nuswantoro</font><br>
-                    <font color="#dbe6ee">A12.2025.07407 | Kelompok A12.6203</font>
-                </td>
-            </tr>
-        </table>
+    <header class="hero">
+        <span class="eyebrow">PORTOFOLIO PRIBADI</span>
+        <h1>DIYANDRA JAGADDITHA</h1>
+        <p>Program Studi Sistem Informasi &ndash; Universitas Dian Nuswantoro</p>
+        <p>A12.2025.07407 | Kelompok A12.6203</p>
     </header>
 
     <!-- Navigasi Utama -->
-    <nav aria-label="Navigasi utama">
-        <table width="100%" bgcolor="#ffffff" cellpadding="12" cellspacing="0" border="1" bordercolor="#dce4e9">
-            <tr>
-                <td align="center">
-                    <a href="#profil">Profil Saya</a> &nbsp;|&nbsp;
-                    <a href="#pendidikan">Pendidikan</a> &nbsp;|&nbsp;
-                    <a href="#keahlian">Keahlian &amp; Hobi</a> &nbsp;|&nbsp;
-                    <a href="#proyek">Proyek</a> &nbsp;|&nbsp;
-                    <a href="#kontak">Kontak</a>
-                </td>
-            </tr>
-        </table>
+    <nav class="navbar navbar-expand-md navbar-custom sticky-top" aria-label="Navigasi utama">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#atas" style="color:var(--navy)">Diyandra J.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuUtama" aria-controls="menuUtama"
+                    aria-expanded="false" aria-label="Buka menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="menuUtama">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#profil">Profil Saya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pendidikan">Pendidikan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian &amp; Hobi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyek">Proyek</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <br>
-
-    <main>
-    <table width="90%" align="center" cellpadding="0" cellspacing="0">
-    <tr><td>
+    <main class="container py-4">
 
         <!-- Bagian Profil -->
-        <section id="profil">
-            <table width="100%" bgcolor="#ffffff" border="1" bordercolor="#dce4e9" cellpadding="22" cellspacing="0">
-                <tr>
-                    <td>
-                        <h2><font color="#183a56"><font color="#b87d4e">A.</font> Profil Saya</font></h2>
+        <section id="profil" class="section-card">
+            <h2 class="section-title h3"><span class="letter">A.</span> Profil Saya</h2>
 
-                        <table width="100%" cellpadding="8" cellspacing="0">
-                            <tr>
-                                <td valign="top" width="170">
-                                    <figure>
-                                        <img src="image/profil.jpeg" alt="Foto Diyandra Jagadditha" width="150" height="180" border="1">
-                                        <figcaption><font size="2" color="#617184"><em>Diyandra Jagadditha</em></font></figcaption>
-                                    </figure>
-                                </td>
-                                <td valign="top">
-                                    <p>
-                                        Halo! Nama saya <b><font color="#183a56">Diyandra Jagadditha</font></b>, mahasiswa aktif
-                                        program studi Sistem Informasi di Fakultas Ilmu Komputer. Saya memiliki ketertarikan
-                                        di bidang <b>data</b> serta <b>analisis sistem informasi</b>. Saya senang mempelajari
-                                        teknologi baru yang dapat membantu menyelesaikan permasalahan.
-                                    </p>
+            <div class="profile-wrap mb-4">
+                <figure class="profile-photo m-0">
+                    <img src="image/profil.jpeg" alt="Foto Diyandra Jagadditha">
+                    <figcaption><em>Diyandra Jagadditha</em></figcaption>
+                </figure>
+                <div class="profile-text">
+                    <p>
+                        Halo! Nama saya <strong style="color:var(--navy)">Diyandra Jagadditha</strong>, mahasiswa aktif
+                        program studi Sistem Informasi di Fakultas Ilmu Komputer. Saya memiliki ketertarikan
+                        di bidang <strong>data</strong> serta <strong>analisis sistem informasi</strong>. Saya senang
+                        mempelajari teknologi baru yang dapat membantu menyelesaikan permasalahan.
+                    </p>
+                    <blockquote class="quote-box mb-0">
+                        &ldquo;Belajar teknologi bukan soal menghafal, tetapi soal terus mencoba dan memahami.&rdquo;
+                    </blockquote>
+                </div>
+            </div>
 
-                                    <table width="100%" cellpadding="0" cellspacing="0">
-                                        <tr>
-                                            <td width="4" bgcolor="#b87d4e"></td>
-                                            <td bgcolor="#f6f7f5">
-                                                <blockquote>
-                                                    <font color="#617184"><em>&ldquo;Belajar teknologi bukan soal menghafal, tetapi soal terus mencoba dan memahami.&rdquo;</em></font>
-                                                </blockquote>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
+            <h3 class="sub-title">Data Singkat</h3>
+            <dl class="info-grid mb-4">
+                <dt>Nama Lengkap</dt><dd>Diyandra Jagadditha</dd>
+                <dt>NIM</dt><dd>A12.2025.07407</dd>
+                <dt>Program Studi</dt><dd>Sistem Informasi (S1)</dd>
+                <dt>Kampus</dt><dd>Universitas Dian Nuswantoro, Semarang</dd>
+                <dt>Minat</dt><dd>Data Science, Machine Learning, Pemrograman Web</dd>
+            </dl>
 
-                        <h3><font color="#183a56">Data Singkat</font></h3>
-                        <table width="100%" cellpadding="8" cellspacing="0" border="1" bordercolor="#dce4e9">
-                            <tr>
-                                <td width="30%" bgcolor="#eff4f6"><b><font color="#183a56">Nama Lengkap</font></b></td>
-                                <td>Diyandra Jagadditha</td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#eff4f6"><b><font color="#183a56">NIM</font></b></td>
-                                <td>A12.2025.07407</td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#eff4f6"><b><font color="#183a56">Program Studi</font></b></td>
-                                <td>Sistem Informasi (S1)</td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#eff4f6"><b><font color="#183a56">Kampus</font></b></td>
-                                <td>Universitas Dian Nuswantoro, Semarang</td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#eff4f6"><b><font color="#183a56">Minat</font></b></td>
-                                <td>Data Science, Machine Learning, Pemrograman Web</td>
-                            </tr>
-                        </table>
-
-                        <br>
-
-                        <details>
-                            <summary><b><font color="#b87d4e">Tentang halaman ini (klik untuk membuka)</font></b></summary>
-                            <p>
-                                Halaman web ini dibuat menggunakan <abbr title="HyperText Markup Language">HTML5</abbr>
-                                murni tanpa <abbr title="Cascading Style Sheets">CSS</abbr> dan JavaScript untuk memenuhi
-                                instruksi pembuatan struktur dasar web. Dalam pembuatannya, saya menggunakan berbagai tag
-                                HTML untuk menyusun struktur dan menampilkan informasi, serta mempelajari fungsi setiap tag
-                                agar dapat digunakan sesuai kebutuhan. Pembuatan halaman ini menjadi latihan untuk memahami
-                                dasar-dasar pengembangan web, dengan harapan saya dapat menggunakan HTML untuk membuat
-                                halaman web yang lebih kompleks.
-                            </p>
-                        </details>
-                    </td>
-                </tr>
-            </table>
+            <details>
+                <summary class="fw-bold" style="color:var(--copper); cursor:pointer;">Tentang halaman ini (klik untuk membuka)</summary>
+                <p class="mt-2 mb-0">
+                    Halaman ini awalnya dibuat dengan <abbr title="HyperText Markup Language">HTML5</abbr> murni
+                    (Tugas 1). Pada Tugas 2, tampilannya didesain ulang menggunakan
+                    <abbr title="Cascading Style Sheets">CSS</abbr> kustom, Flexbox, Grid, media queries, dan
+                    framework Bootstrap 5 agar responsif di desktop maupun mobile.
+                </p>
+            </details>
         </section>
-
-        <br>
 
         <!-- Bagian Pendidikan -->
-        <section id="pendidikan">
-            <table width="100%" bgcolor="#ffffff" border="1" bordercolor="#dce4e9" cellpadding="22" cellspacing="0">
-                <tr>
-                    <td>
-                        <h2><font color="#183a56"><font color="#b87d4e">B.</font> Riwayat Pendidikan</font></h2>
+        <section id="pendidikan" class="section-card">
+            <h2 class="section-title h3"><span class="letter">B.</span> Riwayat Pendidikan</h2>
 
-                        <table width="100%" border="1" bordercolor="#dce4e9" cellpadding="10" cellspacing="0">
-                            <caption><font color="#617184"><b>Riwayat pendidikan Diyandra Jagadditha</b></font></caption>
-                            <thead>
-                                <tr bgcolor="#183a56">
-                                    <th scope="col"><font color="#ffffff">No</font></th>
-                                    <th scope="col"><font color="#ffffff">Tingkat Pendidikan</font></th>
-                                    <th scope="col"><font color="#ffffff">Nama Instansi</font></th>
-                                    <th scope="col"><font color="#ffffff">Tahun</font></th>
-                                    <th scope="col"><font color="#ffffff">Keterangan</font></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td align="center">1</td>
-                                    <td>Sekolah Menengah Kejuruan (SMK)</td>
-                                    <td>SMKN 11 Semarang</td>
-                                    <td><time datetime="2021">2021</time> - <time datetime="2024">2024</time></td>
-                                    <td>Jurusan Multimedia</td>
-                                </tr>
-                                <tr bgcolor="#eff4f6">
-                                    <td align="center">2</td>
-                                    <td>Perguruan Tinggi (S1)</td>
-                                    <td><a href="https://www.dinus.ac.id" target="_blank" rel="noopener">Universitas Dian Nuswantoro</a></td>
-                                    <td><time datetime="2025">2025</time> - Sekarang</td>
-                                    <td>Sistem Informasi</td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr bgcolor="#f6f7f5">
-                                    <td colspan="5"><font size="2" color="#617184">Data diperbarui pada tahun 2026.</font></td>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </td>
-                </tr>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-edu table-bordered align-middle mb-0">
+                    <caption>Riwayat pendidikan Diyandra Jagadditha</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">No</th>
+                            <th scope="col">Tingkat Pendidikan</th>
+                            <th scope="col">Nama Instansi</th>
+                            <th scope="col">Tahun</th>
+                            <th scope="col">Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td>Sekolah Menengah Kejuruan (SMK)</td>
+                            <td>SMKN 11 Semarang</td>
+                            <td class="text-nowrap"><time datetime="2021">2021</time> - <time datetime="2024">2024</time></td>
+                            <td>Jurusan Multimedia</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">2</td>
+                            <td>Perguruan Tinggi (S1)</td>
+                            <td><a href="https://www.dinus.ac.id" target="_blank" rel="noopener">Universitas Dian Nuswantoro</a></td>
+                            <td class="text-nowrap"><time datetime="2025">2025</time> - Sekarang</td>
+                            <td>Sistem Informasi</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5" class="small text-secondary">Data diperbarui pada tahun 2026.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </section>
-
-        <br>
 
         <!-- Bagian Keahlian & Hobi -->
-        <section id="keahlian">
-            <table width="100%" bgcolor="#ffffff" border="1" bordercolor="#dce4e9" cellpadding="22" cellspacing="0">
-                <tr>
-                    <td>
-                        <h2><font color="#183a56"><font color="#b87d4e">C.</font> Keahlian &amp; Hobi</font></h2>
+        <section id="keahlian" class="section-card">
+            <h2 class="section-title h3"><span class="letter">C.</span> Keahlian &amp; Hobi</h2>
 
-                        <table width="100%" cellpadding="10" cellspacing="0">
-                            <tr>
-                                <td valign="top" width="50%">
-                                    <h3><font color="#183a56">1. Keahlian Utama</font></h3>
-                                    <p><font size="2" color="#617184">Tingkat penguasaan saat ini (dalam proses belajar):</font></p>
-                                    <ul>
-                                        <li>
-                                            <label for="k-web">Pemrograman Web Dasar</label><br>
-                                            <meter id="k-web" min="0" max="100" value="60">60%</meter> 60%
-                                        </li>
-                                        <li>
-                                            <label for="k-ds">Data Science</label><br>
-                                            <meter id="k-ds" min="0" max="100" value="50">50%</meter> 50%
-                                        </li>
-                                        <li>
-                                            <label for="k-ml">Machine Learning (ML)</label><br>
-                                            <meter id="k-ml" min="0" max="100" value="40">40%</meter> 40%
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td valign="top" width="50%">
-                                    <h3><font color="#183a56">2. Hobi &amp; Minat</font></h3>
-                                    <ol>
-                                        <li>Membaca dokumentasi di <a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
-                                        <li>Membaca buku</li>
-                                        <li>Latihan pemrograman</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
+            <div class="skill-grid">
+                <div>
+                    <h3 class="sub-title">1. Keahlian Utama</h3>
+                    <p class="small text-secondary">Tingkat penguasaan saat ini (dalam proses belajar):</p>
+
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between"><span>Pemrograman Web Dasar</span><span>60%</span></div>
+                        <div class="progress" role="progressbar" aria-label="Pemrograman Web Dasar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between"><span>Data Science</span><span>50%</span></div>
+                        <div class="progress" role="progressbar" aria-label="Data Science" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between"><span>Machine Learning (ML)</span><span>40%</span></div>
+                        <div class="progress" role="progressbar" aria-label="Machine Learning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="sub-title">2. Hobi &amp; Minat</h3>
+                    <ol>
+                        <li>Membaca dokumentasi di <a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
+                        <li>Membaca buku</li>
+                        <li>Latihan pemrograman</li>
+                    </ol>
+                </div>
+            </div>
         </section>
-
-        <br>
 
         <!-- Bagian Proyek -->
-        <section id="proyek">
-            <table width="100%" bgcolor="#ffffff" border="1" bordercolor="#dce4e9" cellpadding="22" cellspacing="0">
-                <tr>
-                    <td>
-                        <h2><font color="#183a56"><font color="#b87d4e">D.</font> Proyek &amp; Aktivitas Akademik</font></h2>
+        <section id="proyek" class="section-card">
+            <h2 class="section-title h3"><span class="letter">D.</span> Proyek &amp; Aktivitas Akademik</h2>
 
-                        <article>
-                            <table width="100%" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td width="4" bgcolor="#b87d4e"></td>
-                                    <td>
-                                        <table width="100%" cellpadding="12" cellspacing="0">
-                                            <tr>
-                                                <td>
-                                                    <header>
-                                                        <h3><font color="#183a56">Tugas Pemrograman Web 1</font></h3>
-                                                        <font size="2" color="#617184">Semester 3 &ndash; Sistem Informasi</font>
-                                                    </header>
-                                                    <p>
-                                                        Proyek ini adalah pembuatan halaman profil dan form interaktif
-                                                        menggunakan struktur elemen semantik HTML, tabel terstruktur, dan
-                                                        beberapa elemen input form.
-                                                    </p>
-                                                    <p>
-                                                        Elemen yang dipakai:
-                                                        <code>header</code>, <code>nav</code>, <code>main</code>,
-                                                        <code>section</code>, <code>article</code>, <code>aside</code>,
-                                                        <code>table</code>, <code>form</code>, <code>footer</code>
-                                                    </p>
-                                                    <p>
-                                                        Progres pengerjaan:
-                                                        <progress value="100" max="100">100%</progress> 100%
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </article>
+            <article class="project-card">
+                <header>
+                    <h3 class="mb-0">Tugas Pemrograman Web 1</h3>
+                    <small class="text-secondary">Semester 3 &ndash; Sistem Informasi</small>
+                </header>
+                <p class="mt-2">
+                    Proyek ini adalah pembuatan halaman profil dan form interaktif menggunakan struktur
+                    elemen semantik HTML, tabel terstruktur, dan beberapa elemen input form.
+                </p>
+                <p>
+                    Elemen yang dipakai:
+                    <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>,
+                    <code>article</code>, <code>aside</code>, <code>table</code>, <code>form</code>, <code>footer</code>
+                </p>
+                <p class="mb-1">Progres pengerjaan: 100%</p>
+                <div class="progress" role="progressbar" aria-label="Progres Tugas 1" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 100%"></div>
+                </div>
+            </article>
 
-                        <br>
-
-                        <aside>
-                            <table width="100%" bgcolor="#fdf3e9" border="1" bordercolor="#edbf98" cellpadding="12" cellspacing="0">
-                                <tr>
-                                    <td>
-                                        <b><font color="#b87d4e">Catatan kampus:</font></b> informasi jadwal perkuliahan dan kurikulum
-                                        dapat dilihat di portal
-                                        <a href="https://mhs.dinus.ac.id" target="_blank" rel="noopener">SIADIN UDINUS</a>.
-                                    </td>
-                                </tr>
-                            </table>
-                        </aside>
-                    </td>
-                </tr>
-            </table>
+            <aside class="note-box">
+                <strong>Catatan kampus:</strong> informasi jadwal perkuliahan dan kurikulum dapat dilihat di portal
+                <a href="https://mhs.dinus.ac.id" target="_blank" rel="noopener">SIADIN UDINUS</a>.
+            </aside>
         </section>
-
-        <br>
 
         <!-- Bagian Form Kontak -->
-        <section id="kontak">
-            <table width="100%" bgcolor="#ffffff" border="1" bordercolor="#dce4e9" cellpadding="22" cellspacing="0">
-                <tr>
-                    <td>
-                        <h2><font color="#183a56"><font color="#b87d4e">E.</font> Form Kontak Pengunjung</font></h2>
-                        <p>Silakan isi form di bawah ini untuk mengirimkan pesan. Kolom bertanda <b>*</b> wajib diisi.</p>
+        <section id="kontak" class="section-card">
+            <h2 class="section-title h3"><span class="letter">E.</span> Form Kontak Pengunjung</h2>
+            <p>Silakan isi form di bawah ini untuk mengirimkan pesan. Kolom bertanda <strong>*</strong> wajib diisi.</p>
 
-                        <form action="simpan.php" method="post">
+            <form class="contact-form" action="simpan.php" method="post">
 
-                            <fieldset>
-                                <legend><b><font color="#183a56">Data Diri</font></b></legend>
+                <fieldset>
+                    <legend>Data Diri</legend>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <label for="fnama" class="form-label fw-bold">Nama Lengkap *</label>
+                            <input type="text" class="form-control" id="fnama" name="fnama"
+                                   placeholder="Contoh: Budi Santoso" autocomplete="name" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="femail" class="form-label fw-bold">Email *</label>
+                            <input type="email" class="form-control" id="femail" name="femail"
+                                   placeholder="nama@email.com" autocomplete="email" required>
+                        </div>
+                        <div class="col-12">
+                            <span class="form-label fw-bold d-block">Jenis Kelamin *</span>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="pria" name="fjkel" value="Pria" required>
+                                <label class="form-check-label" for="pria">Pria</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="wanita" name="fjkel" value="Wanita">
+                                <label class="form-check-label" for="wanita">Wanita</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
 
-                                <p>
-                                    <label for="fnama"><b>Nama Lengkap *</b></label><br>
-                                    <input type="text" id="fnama" name="fnama" size="35"
-                                           placeholder="Contoh: Budi Santoso" autocomplete="name" required>
-                                </p>
+                <fieldset>
+                    <legend>Latar Belakang</legend>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <label for="fprodi" class="form-label fw-bold">Program Studi</label>
+                            <select class="form-select" name="fprodi" id="fprodi">
+                                <option value="" selected disabled>-- Pilih program studi --</option>
+                                <optgroup label="Fakultas Ilmu Komputer">
+                                    <option value="SI">Sistem Informasi S1</option>
+                                    <option value="TI">Teknik Informatika S1</option>
+                                </optgroup>
+                                <optgroup label="Fakultas Lainnya">
+                                    <option value="DKV">Desain Komunikasi Visual S1</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <span class="form-label fw-bold d-block">Hobi / Minat</span>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="coding" name="fhobi[]" value="coding">
+                                <label class="form-check-label" for="coding">Coding</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="reading" name="fhobi[]" value="membaca">
+                                <label class="form-check-label" for="reading">Membaca</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
 
-                                <p>
-                                    <label for="femail"><b>Email *</b></label><br>
-                                    <input type="email" id="femail" name="femail" size="35"
-                                           placeholder="nama@email.com" autocomplete="email" required>
-                                </p>
+                <fieldset>
+                    <legend>Pesan</legend>
+                    <label for="fpesan" class="form-label fw-bold">Isi Pesan *</label>
+                    <textarea class="form-control" name="fpesan" id="fpesan" rows="6"
+                              placeholder="Tulis pesan Anda di sini..." required></textarea>
+                </fieldset>
 
-                                <p>
-                                    <b>Jenis Kelamin *</b><br>
-                                    <input type="radio" id="pria" name="fjkel" value="Pria" required>
-                                    <label for="pria">Pria</label>
-                                    <input type="radio" id="wanita" name="fjkel" value="Wanita">
-                                    <label for="wanita">Wanita</label>
-                                </p>
-                            </fieldset>
-
-                            <br>
-
-                            <fieldset>
-                                <legend><b><font color="#183a56">Latar Belakang</font></b></legend>
-
-                                <p>
-                                    <label for="fprodi"><b>Program Studi</b></label><br>
-                                    <select name="fprodi" id="fprodi">
-                                        <option value="" selected disabled>-- Pilih program studi --</option>
-                                        <optgroup label="Fakultas Ilmu Komputer">
-                                            <option value="SI">Sistem Informasi S1</option>
-                                            <option value="TI">Teknik Informatika S1</option>
-                                        </optgroup>
-                                        <optgroup label="Fakultas Lainnya">
-                                            <option value="DKV">Desain Komunikasi Visual S1</option>
-                                        </optgroup>
-                                    </select>
-                                </p>
-
-                                <p>
-                                    <b>Hobi / Minat</b><br>
-                                    <input type="checkbox" id="coding" name="fhobi[]" value="coding">
-                                    <label for="coding">Coding</label>
-                                    <input type="checkbox" id="reading" name="fhobi[]" value="membaca">
-                                    <label for="reading">Membaca</label>
-                                </p>
-                            </fieldset>
-
-                            <br>
-
-                            <fieldset>
-                                <legend><b><font color="#183a56">Pesan</font></b></legend>
-
-                                <p>
-                                    <label for="fpesan"><b>Isi Pesan *</b></label><br>
-                                    <textarea name="fpesan" id="fpesan" rows="6" cols="45"
-                                              placeholder="Tulis pesan Anda di sini..." required></textarea>
-                                </p>
-                            </fieldset>
-
-                            <p>
-                                <input type="submit" value="Kirim Pesan">
-                                <input type="reset" value="Reset">
-                            </p>
-                        </form>
-                    </td>
-                </tr>
-            </table>
+                <div class="d-flex flex-wrap gap-2">
+                    <button type="submit" class="btn btn-navy">Kirim Pesan</button>
+                    <button type="reset" class="btn btn-outline-secondary">Reset</button>
+                </div>
+            </form>
         </section>
 
-    </td></tr>
-    </table>
+        <p class="text-center"><a href="#atas">&uarr; Kembali ke atas</a></p>
     </main>
 
-    <p align="center"><a href="#atas">&uarr; Kembali ke atas</a></p>
-
-    <footer>
-        <table width="100%" bgcolor="#183a56" cellpadding="22" cellspacing="0">
-            <tr>
-                <td align="center">
-                    <font color="#ffffff">&copy; 2026 Diyandra Jagadditha &ndash; A12.2025.07407 &ndash; Sistem Informasi, Universitas Dian Nuswantoro</font>
-                </td>
-            </tr>
-        </table>
+    <footer class="site-footer">
+        &copy; 2026 Diyandra Jagadditha &ndash; A12.2025.07407 &ndash; Sistem Informasi, Universitas Dian Nuswantoro
     </footer>
 
-</font>
+    <!-- Bootstrap JS (hanya untuk menu hamburger di mobile) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
